@@ -1,5 +1,11 @@
 import colors from 'vuetify/es5/util/colors';
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+	router: {
+		base: '/<repository-name>/'
+	}
+} : {};
+
 export default {
 	mode: 'universal',
 	/*
@@ -18,7 +24,9 @@ export default {
 		]
 	},
 
-	rootDir: 'src/',
+	srcDir: 'src/',
+
+	routerBase,
 
 	/*
 	** Customize the progress-bar color
