@@ -26,7 +26,7 @@ export default {
 
 	srcDir: 'src/',
 
-	routerBase,
+	...routerBase,
 
 	/*
 	** Customize the progress-bar color
