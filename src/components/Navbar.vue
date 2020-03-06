@@ -2,14 +2,14 @@
 	<div id="nav">
 		<v-toolbar color="primary">
 			<!-- <v-app-bar-nav-icon /> -->
-			<v-toolbar-title>IGCSE Score Calculator</v-toolbar-title>
+			<v-toolbar-title>IG Score Calculator</v-toolbar-title>
 			<v-spacer />
 			<v-toolbar-items>
 				<v-btn text nuxt to="/">
-					Home
+					<v-icon>mdi-home-variant</v-icon>
 				</v-btn>
 				<v-btn text nuxt to="/calculator">
-					Calculator
+					<v-icon>mdi-calculator</v-icon>
 				</v-btn>
 				<v-btn text href="https://twitter.com/gamesproseif" target="_blank">
 					<v-icon>mdi-twitter</v-icon>

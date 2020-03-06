@@ -17,7 +17,7 @@
 
 			<v-list-item>
 				<v-list-item-content>
-					<v-list-item-title>Governemnt Score</v-list-item-title>
+					<v-list-item-title>Government Score</v-list-item-title>
 					<v-list-item-subtitle>{{ Math.floor(government) }} / 410</v-list-item-subtitle>
 				</v-list-item-content>
 			</v-list-item>
@@ -49,10 +49,10 @@ export default {
 			return total;
 		},
 		percentage () {
-			return (this.total / this.subjects.length) * 100;
+			return ((this.total / this.subjects.length) * 100) || 0;
 		},
 		government () {
-			return (this.total / this.subjects.length) * 410;
+			return ((this.total / this.subjects.length) * 410) || 0;
 		}
 	}
 };

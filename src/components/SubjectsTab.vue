@@ -99,8 +99,12 @@ export default {
 	},
 	methods: {
 		addSubject () {
+			const CURRENT_GRADES = this.GRADES[this.form.numericalGrading ? 'NUM' : 'ALPHA'][this.form.degree];
 			const { name, awardingBody, degree, grade, numericalGrading } = this.form;
 			if (!name || !awardingBody || !degree || !grade) {
+				return;
+			}
+			if (!CURRENT_GRADES.length || !CURRENT_GRADES.includes(this.form.grade)) {
 				return;
 			}
 			this.$store.commit(
