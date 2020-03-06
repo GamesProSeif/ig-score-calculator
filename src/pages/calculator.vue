@@ -26,6 +26,11 @@ export default {
 	components: {
 		SubjectsTab,
 		OverviewTab
+	},
+	head () {
+		return {
+			title: 'Calculator'
+		};
 	}
 };
 </script>

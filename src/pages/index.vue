@@ -11,10 +11,25 @@
 			<v-btn nuxt to="/calculator" text color="primary">
 				Go to Calculator
 			</v-btn>
+			<v-spacer />
+			<v-chip class="ma-2" color="default" disabled>
+				v{{ version }}
+			</v-chip>
 		</v-card-actions>
 	</v-card>
 </template>
 
 <script>
-export default {};
+export default {
+	data () {
+		return {
+			version: process.env.version
+		};
+	},
+	head () {
+		return {
+			title: 'Home'
+		};
+	}
+};
 </script>
